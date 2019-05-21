@@ -1,0 +1,35 @@
+<div class="page-container">
+		<div class="side-bar">
+		  <ul class="nav flex-column">
+			
+			<li class="nav-item" *ngIf="authService.isLoggedIn()" >
+			  <a class="nav-link active" routerLink="home">
+				<ion-icon name="home"></ion-icon>
+			  </a>
+			</li>
+	
+		
+			<li class= "nav-item" *ngIf="authService.isLoggedIn()">
+					<a class="nav-link" routerLink= "new-user"> 	
+						<ion-icon name="person-add"></ion-icon>
+						</a>
+				
+			</li>
+			<li class="nav-item"  *ngIf="authService.isLoggedInF()">
+			  <a class="nav-link" routerLink="login">
+				<ion-icon name="person"></ion-icon>
+			  </a>
+			</li>
+			<li class="nav-item"*ngIf="authService.isLoggedIn()">
+			  <a class="nav-link" routerLink="about">
+				<ion-icon name="information-circle-outline"></ion-icon>
+			  </a>
+			</li>
+		  </ul>
+		</div>
+		<main>
+				<router-outlet></router-outlet>
+			</main>
+	</div>
+
+	
